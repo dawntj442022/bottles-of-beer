@@ -39,15 +39,9 @@ app.get("/:beer", (request, response) => {
     title: "homework2",
     message: `${num}Bottles of beer on the wall`,
     content: `${num - 1}`,
-  });
-});
-
-app.get("/", (request, response) => {
-  response.render("template", {
-    title: "homework2",
-    message: "0 Bottles of beer on the wall",
-    content: "0",
-    return: `<a href="http://localhost:3000/"></a>`,
+    if(num = 0) {
+      return `<a href="http://localhost:3000/)`;
+    },
   });
 });
 
