@@ -42,6 +42,15 @@ app.get("/:beer", (request, response) => {
   });
 });
 
+app.get("/", (request, response) => {
+  response.render("template", {
+    title: "homework2",
+    message: "0 Bottles of beer on the wall",
+    content: "0",
+    return: `<a href="http://localhost:3000/"></a>`,
+  });
+});
+
 //Listen on the port
 app.listen(3000, () => {
   console.log("Server is up on port 3000");
