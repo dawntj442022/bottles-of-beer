@@ -43,10 +43,11 @@ app.get("/:beer", (request, response) => {
 });
 
 app.get("/", (req, res) => {
-  if (num > 0) {
-    res.redirect("/");
+  if (num < 0) {
     replace.content(`<a href="http://localhost:3000/">"homepage"</a>`);
+    res.redirect("/");
   }
+  num--;
 });
 
 //Listen on the port
