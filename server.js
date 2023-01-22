@@ -39,10 +39,14 @@ app.get("/:beer", (request, response) => {
     title: "homework2",
     message: `${num}Bottles of beer on the wall`,
     content: `${num - 1}`,
-    if(num = 0) {
-      return `<a href="http://localhost:3000/)`;
-    },
   });
+});
+
+app.get("/", (req, res) => {
+  if (num > 0) {
+    res.redirect("/");
+    replace.content(`<a href="http://localhost:3000/">"homepage"</a>`);
+  }
 });
 
 //Listen on the port
